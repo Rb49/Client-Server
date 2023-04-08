@@ -1,0 +1,41 @@
+This RFC document describes the Client-Server Application commands and their expected input/output
+
+COMMANDS: Non-admin commands
+
+/echo <message>: 
+Echoes the provided text back to the user.
+Input: A string of text to be echoed back to the user.
+Output: A message displaying the echoed text. 
+				  
+/time: 
+Returns the current server time.
+Input: None
+Output: A message displaying the current server time.
+
+/close:
+Sends a termination code to the client to close the connection from its side while closing the connection.
+Input: None
+Output: A message containing a termination code and a greeting of farewell.
+
+/calculator <arithmetic_expression>:
+Returns the answer of a provided arithmetic expression.
+Input: A string of an arithmetic expression to be calculated.
+Output: A message containing the answer to the expression or an error message in case of zero-division or invalid input.
+
+/quadroots <param_a> <param_b> <param_c>:
+Returns the roots of a provided quadratic equation in the form of ax^2 + bx + c.
+Input: A string of the 3 parameters of a quadratic equation.
+Output: A message displaying the roots of the provided equation.
+
+/help:
+Returns a description of all the services the server can provide to the client.
+Input: None
+Output: A message displaying all the services the server can provide and their commands.
+
+COMMANDS: Admin commands
+NOTE: The admin password is set to '123'.
+
+/shutdown <admin_password>:
+Performs a server shutdown in which every active connection is closed and the server UDP socket is closed, declining new connections.
+Input: A string of the admin password.
+Output: If the password provided is correct: a message containing a termination code for every active connection followed by a greeting of farewell. Else, an error message to the shutdown requesting connection.
