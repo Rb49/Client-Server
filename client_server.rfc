@@ -38,4 +38,9 @@ NOTE: The admin password is set to '123'.
 /shutdown <admin_password>:
 Performs a server shutdown in which every active connection is closed and the server UDP socket is closed, declining new connections.
 Input: A string of the admin password.
-Output: If the password provided is correct: a message containing a termination code for every active connection followed by a greeting of farewell. Else, an error message to the shutdown requesting connection.
+Output: If the password provided is correct: a message containing a termination code for every active connection followed by a greeting of farewell. Else: an error message to the shutdown requesting connection.
+
+/log <admin_password>:
+Returns the admin server log, containing any important connection data since the server was started.
+Input: A string of the admin password.
+Output: If the password provided is correct: a message containing the admin server log. Else: an error message.
