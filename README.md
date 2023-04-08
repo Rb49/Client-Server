@@ -80,6 +80,7 @@ The app requires Python and the following libraries:
 	- datatime
 	- time
 	- re
+	- numpy
 	- math
 	- hashlib
 
