@@ -21,7 +21,7 @@ My application packs several features that make it special.
 
 ## Security
 
-    - Every interaction with the client as well as the server is encrypted using the AES-128 algorithm
+    - Every interaction with the client as well as the server is encrypted using the AES-128 algorithm (my own implementation!)
     - Key transformation is made securely using the DH algorithm
     - Admin password is not stored as plain text, but as its hash. (SHA-256)
     - Clients that typed the correct admin password will not have access to other connections' symmetric keys.
